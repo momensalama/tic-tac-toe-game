@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #707b89;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.game-board {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 0 10px #37474f;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.game-board .square {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #66e9df;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-board .square .circle {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 15px solid #d8fc77;
+  box-sizing: border-box;
+}
+.game-board .square .cross {
+  height: 80px;
+  width: 80px;
+  position: relative;
+  margin-right: 17px;
+}
+.game-board .square .cross::before, .game-board .square .cross::after {
+  content: "";
+  position: absolute;
+  background-color: #fc8380;
+  width: 22%;
+  height: 100%;
+  left: 50%;
+}
+.game-board .square .cross::before {
+  transform: rotate(45deg);
+}
+.game-board .square .cross::after {
+  transform: rotate(-45deg);
+}
+
+.info {
+  color: white;
+}/*# sourceMappingURL=style.css.map */

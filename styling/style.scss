@@ -1,0 +1,64 @@
+// google fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #707b89;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.game-board {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 0 10px #37474f;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  // border: 1px solid #66e9df;
+  .square {
+    width: 100px;
+    height: 100px;
+    // box-shadow: inset 0 0 10px #263238;
+    border: 1px solid #66e9df;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .circle {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      border: 15px solid #d8fc77;
+      box-sizing: border-box;
+    }
+    .cross {
+      height: 80px;
+      width: 80px;
+      position: relative;
+      margin-right: 17px;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #fc8380;
+        width: 22%;
+        height: 100%;
+        left: 50%;
+      }
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.info {
+  color: white;
+}
